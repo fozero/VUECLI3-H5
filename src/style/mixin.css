@@ -1,0 +1,9 @@
+@define-mixin ft $num {
+  font-size: calc($(num)px * 2); /*px*/
+}
+@define-mixin bd $pos, $color {
+  border-$(pos): 1px solid $color; /*no*/
+}
+@define-mixin bds $color {
+  border: 1px solid $color; /*no*/
+}

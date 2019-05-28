@@ -1,0 +1,257 @@
+@import url('./colors.css');
+html,
+body,
+#app,
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f3f5;
+}
+#app {
+  background-color: var(--white);
+}
+body {
+  padding: constant(safe-area-inset-top) constant(safe-area-inset-right)
+    constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+  position: relative;
+  font-family: DINPro-Regular, Roboto, Helvetica Neue, Helvetica, Aria,
+    PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei,
+    sans-serif;
+  -webkit-overflow-scrolling: auto;
+}
+
+.view-content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.25s;
+}
+
+.has-bottomnav .view-content {
+  bottom: 50px;
+}
+
+.has-appbar .view-content {
+  top: 44px;
+}
+
+.appbar.title-left .appbar-title {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.square {
+  position: relative;
+}
+
+.square img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--GhostGrey);
+  box-sizing: border-box;
+}
+
+.square li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.square-inner-5 > li {
+  width: calc(98% / 3); /* calc里面的运算符两边要空格 */
+  height: calc(98% / 3);
+  margin-right: 1%;
+  margin-bottom: 1%;
+  overflow: hidden;
+}
+.square-inner-5 > li:nth-of-type(3n) {
+  /* 选择个数是3的倍数的元素 */
+  margin-right: 0;
+}
+.square-inner-4 > li {
+  width: calc(98% / 2); /* calc里面的运算符两边要空格 */
+  height: calc(98% / 2);
+  margin-right: 1%;
+  margin-bottom: 1%;
+  overflow: hidden;
+}
+
+.square-inner-3 > li {
+  width: calc(98% / 3); /* calc里面的运算符两边要空格 */
+  height: calc(98% / 3);
+  margin-right: 1%;
+  margin-bottom: 1%;
+  overflow: hidden;
+}
+.square-inner-3 > li:nth-of-type(3n) {
+  /* 选择个数是3的倍数的元素 */
+  margin-right: 0;
+}
+.square-inner-2 > li {
+  width: calc(98% / 2); /* calc里面的运算符两边要空格 */
+  height: calc(98% / 2);
+  margin-right: 1%;
+  margin-bottom: 1%;
+  overflow: hidden;
+}
+.square-inner-1 > li {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.flex > li:nth-of-type(n + 7) {
+  /* 选择倒数的三个元素，n可以取0 */
+  margin-bottom: 0;
+}
+.weui-picker__action:last-child {
+  color: var(--DarkBlack)!important;
+}
+
+.top-percent {
+  opacity: 0!important;
+}
+.topic-info {
+  border: 1px solid var(--DarkBlue);
+  color: var(--DarkBlue);
+  height: 24px;
+  line-height: 24px;
+  padding: 0px 9px;
+  margin-top: 2px;
+}  
+.icon-global-s {
+  margin-left: -24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon-global-m {
+  margin-left: -24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon-global-l {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+.percent-value {
+  font-family: 'DIN-Condensed-Bold';
+  color: var(--White);
+  font-size: 52px; /*px*/
+  margin-right: 20px;
+  margin-top: 8px;
+}
+.icon-global-m .percent-value {
+  display: block;
+  padding-left: 4px;
+}
+.percent-symbol {
+  font-size: 40px; /*px*/
+  margin-left: 5px;
+}
+
+a {
+  text-decoration: none!important;
+}
+a:link {
+  text-decoration: none!important;
+}
+a:active {
+  text-decoration: none!important;  
+}
+a:visited {
+  text-decoration: none!important;
+}
+a:hover {
+  text-decoration: none!important;
+}
+
+.pic-loading,
+.pic-loading:after {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+.pic-loading {
+  font-size: 6px; /*px*/
+  position: absolute;
+  text-indent: -9999em;
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  border-right: 3px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  border-left: 3px solid var(--White);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#__vconsole .vc-switch {
+  top: 1em!important;
+  bottom: auto!important;
+}
+
+.scale-img {
+  transform: scale(.5);
+}
+
+.input-limiter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--DarkGrey);
+  padding-right: 10px;
+}
