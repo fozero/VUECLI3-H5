@@ -3,9 +3,9 @@
     <div class="view-content">
       <div class="header">
         <div class="header-img">
-          <img class="avatar" :src="userAvatar" alt="">
+          <img class="avatar" src="@/assets/avatar.png" alt="">
         </div>
-        <div class="nickname">{{wxNickname}}</div>
+        <div class="nickname">阿健</div>
       </div>
       <div class="list">
         <mt-cell
