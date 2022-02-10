@@ -42,7 +42,7 @@
     "babel-plugin-component": "^1.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "postcss-px-to-viewport": "^1.1.0",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-axios": "0.0.4",
